@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = (options = {}) => {
   return function windowEnvHandler(req, res) {
     const windowEnv = _.merge({}, options.windowEnv, {
-      MOUNTPATH: path.join(req.app.mountpath, '/'),
+      MOUNTPATH: path.join(req.app.mountpath, '/').replace('\\', '/'),
     });
     const jsOutput = `window.env = ${JSON.stringify(windowEnv)}`;
     res.setHeader('content-type', 'text/javascript');
