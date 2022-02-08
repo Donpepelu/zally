@@ -145,7 +145,7 @@ yarn dev
 > The `yarn dev` task starts the application server in development mode with **nodemon** and **webpack-dev-server** watching for changes.<br>
   The application server acts as a proxy to webpack-dev-server as the target.
 
-### Install, build and run in local Windows 10 development mode
+### Install, build and run in local development mode in Windows
 
 ```
 yarn
